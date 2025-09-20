@@ -30,7 +30,7 @@ export const EXPERIENCES = [
     year: "April 2025 - July 2025",
     role: "Full Stack Developer",
     company: "SMAN 14 BEKASI",
-    description: `Design system AWS services for optimization of Learning Management System.`,
+    description: `Developing a web-based guidance and counseling service system using the Extreme Programming methodology & White Box Testing.`,
     technologies: ["MongoDB", "Express", "React", "Node.js"],
   },
 ];
