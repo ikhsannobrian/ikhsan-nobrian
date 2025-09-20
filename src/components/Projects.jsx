@@ -1,24 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
-import axios from "axios";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-
-  const getProjects = async () => {
-    try {
-      const res = await axios.get("http://localhost:5000/api/projects");
-      setProjects(res.data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getProjects();
-  }, []);
-
   return (
     <div className="pb-4">
       <motion.h2
@@ -30,7 +14,7 @@ const Projects = () => {
         Projects
       </motion.h2>
       <div>
-        {projects.map((project, index) => (
+        {PROJECTS.map((project, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -43,6 +27,7 @@ const Projects = () => {
                 width={250}
                 height={250}
                 className="mb-6 rounded"
+                alt={project.title}
               />
             </motion.div>
             <motion.div
@@ -53,10 +38,10 @@ const Projects = () => {
             >
               <h3 className="mb-2 font-semibold text-2xl">{project.title}</h3>
               <p className="mb-4 text-stone-400">{project.description}</p>
-              {project.technologies.map((tech, index) => (
+              {project.technologies.map((tech, i) => (
                 <span
                   className="mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300"
-                  key={index}
+                  key={i}
                 >
                   {tech}
                 </span>
