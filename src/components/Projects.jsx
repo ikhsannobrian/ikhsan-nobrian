@@ -1,7 +1,24 @@
+import React, { useEffect, useState } from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+
+  const getProjects = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/api/projects");
+      setProjects(res.data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
   return (
     <div className="pb-4">
       <motion.h2
@@ -13,7 +30,7 @@ const Projects = () => {
         Projects
       </motion.h2>
       <div>
-        {PROJECTS.map((project, index) => (
+        {projects.map((project, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -25,15 +42,15 @@ const Projects = () => {
                 src={project.image}
                 width={250}
                 height={250}
-                alt={project.title}
                 className="mb-6 rounded"
               />
             </motion.div>
-            <motion.div 
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            transition={{ duration: 1 }}
-            className="w-full max-w-xl lg:w-3/4">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 1 }}
+              className="w-full max-w-xl lg:w-3/4"
+            >
               <h3 className="mb-2 font-semibold text-2xl">{project.title}</h3>
               <p className="mb-4 text-stone-400">{project.description}</p>
               {project.technologies.map((tech, index) => (

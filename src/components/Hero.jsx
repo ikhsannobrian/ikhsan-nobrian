@@ -52,7 +52,7 @@ const Hero = () => {
             </motion.h2>
             <motion.span
               variants={childVariants}
-              class="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
+              className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
             >
               Full Stack Developer
             </motion.span>

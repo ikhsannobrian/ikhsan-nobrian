@@ -1,9 +1,13 @@
-import project3 from "../assets/projects/project-3.webp";
+import sman14 from "../assets/projects/sman14.png";
 import ecommerce from "../assets/projects/ecommerce.png";
 import traknus from "../assets/projects/traknus.png";
 import cloud from "../assets/projects/cloud.png";
 
-export const HERO_CONTENT = `Currently, I am 7th semester at UPN Veteran Jawa Timur that have eagerness for IT / Data Science and digitalization solutions. As an IT person, I study to develop and made reliable program and IT solution, combining a conventional program. Using C, C++, PHP, MYSQL, BootStrap, Javascirpt, ReactJS, Laravel, HTML, CSS, python, I have designed and engineered multiple systems from conceptual, detailed, to real product. And then I have experienced in cloud solution architect and partnerships of AWS (Amazon Web Service) at TIMCorp-Academy to design system AWS services for optimization of Learning Management System and I have internship experience in creating a complaint and building damage website at PT. Traktor Nusantara..`;
+export const HERO_CONTENT = `My name is Ikhsan Nobrian, a graduate of Universitas Pembangunan Nasional Veteran Jawa Timur with a
+degree in Informatics. I am able to work both independently and collaboratively as part of a team. Through my
+organizational experience, I have developed strong communication skills, diligence, and creativity. I have a
+strong interest in pursuing a career as a Software Engineer or Quality Assurance, supported by hands- on
+experience in website development and software projects.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
@@ -21,6 +25,13 @@ export const EXPERIENCES = [
     company: "TIMCorp-Academy",
     description: `Design system AWS services for optimization of Learning Management System.`,
     technologies: ["Route53", "ALB", "EC2", "Aurora", "EFS"],
+  },
+  {
+    year: "April 2025 - July 2025",
+    role: "Full Stack Developer",
+    company: "SMAN 14 BEKASI",
+    description: `Design system AWS services for optimization of Learning Management System.`,
+    technologies: ["MongoDB", "Express", "React", "Node.js"],
   },
 ];
 
@@ -48,11 +59,11 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "BootStrap", "PHP", "JavaScript", "mySQL"],
   },
   {
-    title: "Portfolio Website",
-    image: project3,
+    title: "Guidance & Counseling Website",
+    image: sman14,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information",
-    technologies: ["ReactJS", "Tailwind"],
+    technologies: ["MongoDB", "Express", "React", "Node.js"],
   },
 ];
 

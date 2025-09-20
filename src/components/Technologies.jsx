@@ -8,6 +8,8 @@ import { SiBootstrap } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { DiMysql } from "react-icons/di";
 import { animate, motion } from "framer-motion";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
 
 const iconVariants = (duration) => ({
   initial: {
@@ -110,6 +112,36 @@ const Technologies = () => {
           className="p-4"
         >
           <DiMysql className="text-7xl text-blue-600" />
+        </motion.div>
+      </motion.div>
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-wrap items-center justify-center gap-4"
+      >
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(3)}
+          className="p-4"
+        >
+          <SiMongodb className="text-7xl text-green-500" />
+        </motion.div>
+      </motion.div>
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-wrap items-center justify-center gap-4"
+      >
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(3)}
+          className="p-4"
+        >
+          <SiExpress className="text-7xl text-black" />
         </motion.div>
       </motion.div>
     </div>
