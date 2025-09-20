@@ -62,7 +62,7 @@ export const PROJECTS = [
     title: "Guidance & Counseling Website",
     image: sman14,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information",
+      "Developed a web-based guidance and counseling service system using the Extreme Programming methodology. The project was built with the MERN stack (MongoDB, Express, React, Node.js) and integrated Progressive Web App (PWA) features to enhance accessibility across devices. The system was tested using White Box Testing to ensure reliability and functionality.",
     technologies: ["MongoDB", "Express", "React", "Node.js"],
   },
 ];

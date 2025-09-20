@@ -126,7 +126,7 @@ const Technologies = () => {
           animate="animate"
           variants={iconVariants(3)}
         >
-          <SiExpress className="text-7xl text-black" />
+          <SiExpress className="text-7xl text-white" />
         </motion.div>
       </motion.div>
     </div>
